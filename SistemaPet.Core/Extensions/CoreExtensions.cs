@@ -15,6 +15,8 @@ namespace SistemaPet.Core.Extensions
         public static IServiceCollection AddCoreClientService(this IServiceCollection service)
         {
             service.AddScoped<IClientService, ClientServiceBase>();
+            service.AddScoped<IPetService, PetServiceBase>();
+
             return service;
         }
     }

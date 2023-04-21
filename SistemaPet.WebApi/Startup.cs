@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using SistemaPet.Core.AutoMapper;
+using SistemaPet.Core.Configurations;
 using SistemaPet.Core.DTOs;
 using SistemaPet.Core.Entities;
 using SistemaPet.Core.Extensions;

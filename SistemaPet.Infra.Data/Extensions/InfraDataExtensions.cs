@@ -16,6 +16,8 @@ namespace SistemaPet.Infra.Data.Extensions
         public static IServiceCollection AddInfraDataClientRepository(this IServiceCollection service)
         {
             service.AddScoped<IClienteRepository, ClientRepository>();
+            service.AddScoped<IPetRepository, PetRepository>();
+
             return service;
         }
     }

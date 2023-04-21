@@ -10,14 +10,14 @@ namespace SistemaPet.Core.InputPorts
 {
     public interface IClientService
     {
-        public ClientDto CreateClient(ClientDto client);
+        public ClientDto CreateClient(ClientDto dto);
 
-        public ClientDto UpdateClient(ClientDto client);
+        public ClientDto UpdateClient(ClientDto dto);
 
-        public ClientDto DeleteClient(ClientDto client);
+        public ClientDto DeleteClient(ClientDto dto);
 
         public string GetClientById(string id);
 
-        public List<Client> GetAll();
+        public List<ClientDto> GetAll();
     }
 }

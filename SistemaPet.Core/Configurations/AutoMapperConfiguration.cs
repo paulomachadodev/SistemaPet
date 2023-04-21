@@ -17,8 +17,10 @@ namespace SistemaPet.Core.Configurations
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Client, ClientDto>();
+                cfg.CreateMap<Pet, PetDto>();
 
                 cfg.CreateMap<ClientDto, Client>();
+                cfg.CreateMap<PetDto, Pet>();
             });
 
             IMapper mapper = config.CreateMapper();

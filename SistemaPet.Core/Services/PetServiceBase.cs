@@ -5,50 +5,48 @@ using SistemaPet.Core.InputPorts;
 using SistemaPet.Core.OutputPorts;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlTypes;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaPet.Core.Services
 {
-    public class ClientServiceBase : IClientService
+    public class PetServiceBase : IPetService
     {
-        private readonly IClienteRepository _clienteRepository;
+        private readonly IPetRepository _petRepository;
         private readonly IMapper _mapper;
 
-        public ClientServiceBase(IClienteRepository clienteRepository, IMapper mapper)
+        public PetServiceBase(IPetRepository petRepository, IMapper mapper)
         {
-            _clienteRepository = clienteRepository;
+            _petRepository = petRepository;
             _mapper = mapper;
         }
 
-        public ClientDto CreateClient(ClientDto dto)
+        public PetDto CreatePet(PetDto dto)
         {
-            var client = _mapper.Map<Client>(dto);
+            var pet = _mapper.Map<Pet>(dto);
 
-            _clienteRepository.CreateClient(client);
+            _petRepository.CreatePet(pet);
 
-            return _mapper.Map<ClientDto>(client);
+            return _mapper.Map<PetDto>(pet);
         }
 
-        public ClientDto DeleteClient(ClientDto dto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ClientDto> GetAll()
+        public PetDto DeletePet(PetDto dto)
         {
             throw new NotImplementedException();
         }
 
-        public string GetClientById(string id)
+        public List<PetDto> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public ClientDto UpdateClient(ClientDto dto)
+        public string GetPetById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PetDto UpdatePet(PetDto dto)
         {
             throw new NotImplementedException();
         }

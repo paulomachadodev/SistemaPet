@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace SistemaPet.Core.Entities
 {
-    public class Client
+    public class Pet
     {
-        public Client() 
+        public Pet() 
         { 
             Id = Guid.NewGuid().ToString();
             DateTimeCreation = DateTime.Now;
             Status = true;
         }
-
         public string? Id { get; set; }
-        public string? Name { get; set; }
-        public string? Cpf { get; set; }
-        public string? Phone { get; set; }
+        public string? Nome { get; set; }
+        public string? Type { get; set; }
+        public string? Breed { get; set; }
         public bool Status { get; set; }
-        public DateTime? DateTimeCreation { get; set; }
-        public List<Pet> Pets { get; set; }
+        public DateTime DateTimeCreation { get; set; }
+        public Client? Client { get; set; }
     }
 }
